@@ -1,21 +1,44 @@
 @import url('https://fonts.googleapis.com/css2?family=Elsie&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Secular+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Prata&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&family=Open+Sans:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
+
+*{
+  margin:0;
+}
 /* navbar */
 
-.navbar-container{
-width: 100%;
-border-top: 1px solid black;
-background-color: white;
-}
 
-ul  {
+
+.all-nav{
   display: flex;
   flex-direction: row;
-  align-items: center;
-  justify-content: space-around;
-  list-style-type: none;
+  justify-content: center;
+  width: 100%;
+}
+
+.navbar-container{
+display: flex;
+top:0;
+width: 100%;
+border-top: 5px solid black;
+background-color: white;
+position: fixed;
+height:8vh;
+
+}
+
+.ul-nav  {
+  padding-top: 2vh;;
+  display: flex;
+}
+
+.li-nav{
+  display: flex;
+   
 }
 
 
@@ -26,28 +49,98 @@ a{
   font-family: 'Secular One', sans-serif;
   font-size: 15px;
   text-transform: uppercase;
+  display: flex;
+  list-style-type: none;
+  
 }
 
+.link-about{
+  padding-right: 70px;
+  padding-left: 40px;
+}
 
 .link-about:hover{
   color: greenyellow !important;
   
 }
 
+.link-projects{
+  padding-right: 100px;
+  padding-left: 150px;
+}
 .link-projects:hover{
   color: #ff0099 !important
 }
 
+.link-skills{
+  padding-right: 100px;
+  padding-left: 100px; 
+}
 .link-skills:hover{
   color: #f3f315 !important
 }
 
+.link-experience{
+  padding-right: 150px;
+  padding-left: 150px;
+}
 .link-experience:hover{
   color: #ff6600 !important
+}
+
+.link-contacts{
+  padding-right: 65px;
+  padding-left: 5px;
 }
 .link-contacts:hover{
   color: #3500ff !important
 }
+
+@media (max-width: 800px){
+  .navbar-container{
+    display: flex;
+    justify-content: center ;
+   
+  }
+  .ul-nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 10px;
+  }
+
+  .link-about{
+    padding-left: 5px;
+    padding-right: 5px;  
+  }
+
+
+ .link-skills{
+  padding-left: 10px;
+  padding-right: 13px; 
+ }
+ .link-projects{
+  padding-left: 0px;
+  padding-right: 0px; 
+ }
+ .link-experience{
+  padding-left: 15px;
+  padding-right: 10px; 
+ }
+ .link-contacts{
+  padding-left: 2px;
+  padding-right: 37px;   
+ }
+ .my-name{
+  display: flex;
+  padding-top: 0px;
+  align-items: center;
+  justify-content: center;
+}
+ }
+ 
+
+
 
 /* home */
 
@@ -62,10 +155,11 @@ flex-direction: column;
  
 }
 .my-name{
+  padding-top: 10vh;
   display: flex;
   margin-top: 50px;
   text-transform: uppercase;
-  font-family: 'Elsie', cursive;
+  font-family: 'Elsie', sans-serif;
   font-size: 70px;
 }
 .my-title{
@@ -76,30 +170,1228 @@ flex-direction: column;
 font-family: 'Prata'; 
 margin: 30px;
 text-align: center;
- 
+padding-bottom: 10vh;
+
   
 }
 
+@media (max-width: 800px) {
+ .my-name{
+   text-align: center;
+   font-size: 50px;
+   padding-top: 2vh;
+ }
+ .my-title{
+   text-align: center;
+ }
+  
+ 
+}
 /* intermezzo */
 .intermezzo{
   border-top: 1px solid black;
   border-bottom: 1px solid black; 
   width: 100%;
-  height: 200px ;
+  height: 100px ;
 }
 /* skills */
 
 .card-one{
   display:flex;
   flex-direction: column;
+  padding-top: 65px;
+  padding-bottom: 90px;
 }
-.title-card{
+
+.devicons-all-frame{
+display:flex;
+flex-wrap: wrap;
+height: 300px;
+align-items: center;
+justify-content: center;
+
+}
+.devicons-frame{
+display: flex;
+flex-wrap: wrap;
+padding-left: 30px;
+padding-right: 30px;
+padding-top: 40px;
+}
+.devicon-span{
 display: flex;
 flex-direction: column;
 align-items: center;
-text-transform: uppercase;
-font-family: 'Secular One', sans-serif;
+
+
 }
+/* Java */
+.devicon-span-java{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color:#3615f3; 
+  font-family: 'Inter'!important;
+  font-weight: bold;
+  }
+.devicon-javascript-plain {
+  font-size: 5em;
+  color: #3615f3 !important;
+}
+/* React */
+.devicon-span-react{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color:#ff0099 ; 
+  font-family: 'Inter'!important;
+  font-weight: bolder; 
+}
+.devicon-react-plain {
+  font-size: 5em;
+  color: #ff0099 ;
+}
+/* Node */
+.devicon-span-nodejs{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color:#f3f315 ; 
+  font-family: 'Inter'!important;
+  font-weight: bolder;  
+}
+.devicon-nodejs-plain {
+  font-size: 5em;
+  color: #f3f315 ;
+}
+/* CSS */
+.devicon-span-css{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color:#ff6600 ; 
+  font-family: 'Inter'!important;
+  font-weight: bolder;  
+}
+.devicon-css3-plain{
+  font-size: 5em;
+  color: #ff6600 ; 
+}
+/* html */
+.devicon-span-html{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color:#f3f315; 
+  font-family: 'Inter'!important;
+  font-weight: bolder; 
+} 
+.devicon-html5-plain{
+  font-size: 5em;
+  color: #f3f315 ;  
+}
+/* Python */
+.devicon-span-python{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color:#49f315 ; 
+  font-family: 'Inter'!important;
+  font-weight: bolder; 
+}
+.devicon-python-plain{
+  font-size: 5em;
+  color: #49f315 
+}
+
+/* Express */
+.devicon-span-express{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color:#3615f3 ; 
+  font-family: 'Inter'!important;
+  font-weight: bolder; 
+}
+.devicon-express-original{
+  font-size: 5em;
+  color: #3615f3; 
+}
+/* Mongo */
+.devicon-span-mongodb{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color:#ff0099 ; 
+  font-family: 'Inter'!important;
+  font-weight: bolder; 
+}
+.devicon-mongodb-plain{
+  font-size: 5em;
+  color: #ff0099; 
+}
+/* Postgre */
+.devicon-span-post{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color:#bbff00 ; 
+  font-family: 'Inter'!important;
+  font-weight: bolder; 
+}
+.devicon-postgresql-plain{
+  font-size: 5em;
+  color: #bbff00;
+}
+/* Django */
+.devicon-span-django{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #ff7b00; 
+  font-family: 'Inter'!important;
+  font-weight: bolder; 
+}
+.devicon-django-plain{
+  font-size: 5em;
+  color: #ff7b00;
+}
+/* git */
+.devicon-span-git{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #15ff00 ; 
+  font-family: 'Inter'!important;
+  font-weight: bolder;  
+}
+.devicon-git-plain{
+  font-size: 5em;
+  color: #15ff00;
+}
+/* GitHub */
+.devicon-span-github{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #c8ff00; ; 
+  font-family: 'Inter'!important;
+  font-weight: bolder;  
+}
+.devicon-github-plain{
+  font-size: 5em;
+  color: #c8ff00;
+}
+
+/* jquery */
+.devicon-span-jquery{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #3700ff;  
+  font-family: 'Inter'!important;
+  font-weight: bolder;  
+}
+.devicon-jquery-plain{
+  font-size: 5em;
+  color: #3700ff;
+}
+
+/* sass */
+.devicon-span-sass{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #ff8800;  
+  font-family: 'Inter'!important;
+  font-weight: bolder;  
+}
+.devicon-sass-plain{
+  font-size: 5em;
+  color: #ff8800;
+}
+
+/* bulma */
+.devicon-span-bulma{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #ff0099;  
+  font-family: 'Inter'!important;
+  font-weight: bolder;  
+}
+.devicon-bulma-plain{
+  font-size: 5em;
+  color: #ff0099;
+}
+
+/* Npm */
+.devicon-span-npm{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #ff5e00;  
+  font-family: 'Inter'!important;
+  font-weight: bolder;  
+}
+.devicon-npm-original-wordmark{
+  font-size: 5em;
+  color: #ff5e00;
+}
+
+/* Vscode */
+.devicon-span-vscode{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #c8ff00;  
+  font-family: 'Inter'!important;
+  font-weight: bolder;  
+}
+.devicon-vscode-plain{
+  font-size: 5em;
+  color: #c8ff00;
+}
+
+/* Heroku */
+.devicon-span-heroku{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #3700ff;  
+  font-family: 'Inter'!important;
+  font-weight: bolder;  
+}
+.devicon-heroku-plain{
+  font-size: 5em;
+  color: #3700ff;
+}
+
+/* mysql */
+.devicon-span-mysql{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #e5ff00;  
+  font-family: 'Inter'!important;
+  font-weight: bolder;  
+}
+.devicon-mysql-plain{
+  font-size: 5em;
+  color: #e5ff00
+}
+
+/* Babel */
+.devicon-span-babel{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #15ff00 ;  
+  font-family: 'Inter'!important;
+  font-weight: bolder;  
+}
+.devicon-babel-plain{
+  font-size: 5em;
+  color: #15ff00;
+}
+/* Chrome */
+.devicon-span-chrome{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #ff0099 !important;  
+  font-family: 'Inter'!important;
+  font-weight: bolder;  
+}
+.devicon-chrome-plain{
+  font-size: 5em;
+  color: #ff0099 !important;
+}
+
+@media (max-width: 800px) {
+  .card-one{
+    display:flex;
+    flex-direction: column;
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  
+  .devicons-all-frame{
+  display:flex;
+  flex-wrap: wrap;
+  height: 450px;
+  align-items: center;
+  justify-content: center;
+  }
+  .devicons-frame{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 15px;
+    }
+  .devicon-span-java{
+    padding-right: 10px;
+    font-size: 10px;
+    
+    }
+  .devicon-javascript-plain {
+    font-size: 4em;
+  }
+  /* React */
+.devicon-span-react{
+  font-size: 10px; 
+  padding-right: 10px;
+ 
+}
+.devicon-react-plain {
+  font-size: 4em;
+}
+/* Node */
+.devicon-span-nodejs{
+  padding-right: 5px;
+  font-size: 10px;  
+}
+.devicon-nodejs-plain {
+  font-size: 4em;
+ 
+}
+/* CSS */
+.devicon-span-css{
+  padding-right: 5px;
+  font-size: 10px;   
+}
+.devicon-css3-plain{
+  font-size: 4em;
+
+}
+/* html */
+.devicon-span-html{
+  padding-right: 5px;
+  font-size: 10px; 
+} 
+.devicon-html5-plain{
+  font-size: 4em;
+}
+/* Python */
+.devicon-span-python{
+  padding-right: 5px;
+  font-size: 10px; 
+}
+.devicon-python-plain{
+  font-size: 4em;
+}
+/* Express */
+.devicon-span-express{
+  padding-right: 5px;
+  font-size: 10px; 
+}
+.devicon-express-original{
+  font-size: 4em;
+}
+/* Mongo */
+.devicon-span-mongodb{
+  padding-right: 5px;
+  font-size: 10px; 
+}
+.devicon-mongodb-plain{
+  font-size: 4em;
+}
+/* Postgre */
+.devicon-span-post{
+  padding-right: 5px;
+  font-size: 10px; 
+}
+.devicon-postgresql-plain{
+  font-size: 4em;
+}
+/* Django */
+.devicon-span-django{
+  padding-right: 5px;
+  font-size: 10px; 
+}
+.devicon-django-plain{
+  font-size: 4em;
+}
+/* git */
+.devicon-span-git{
+  padding-right: 5px;
+  font-size: 10px;  
+}
+.devicon-git-plain{
+  font-size: 4em;
+
+}
+/* GitHub */
+.devicon-span-github{
+  padding-right: 5px;
+  font-size: 10px; 
+  
+}
+.devicon-github-plain{
+  font-size: 4em;
+}
+/* jquery */
+.devicon-span-jquery{
+  padding-right: 5px;
+  font-size: 10px;  
+}
+.devicon-jquery-plain{
+  font-size: 4em;
+}
+/* sass */
+.devicon-span-sass{
+  padding-right: 5px;
+  font-size: 10px;  
+}
+.devicon-sass-plain{
+  font-size: 4em;
+}
+/* bulma */
+.devicon-span-bulma{
+  padding-right: 5px;
+  font-size: 10px;  
+}
+.devicon-bulma-plain{
+  font-size: 4em;
+}
+/* Npm */
+.devicon-span-npm{
+  padding-right: 5px;
+  font-size: 10px;   
+}
+.devicon-npm-original-wordmark{
+  font-size: 4em;
+}
+/* Vscode */
+.devicon-span-vscode{
+  padding-right: 5px;
+  font-size: 10px;  
+}
+.devicon-vscode-plain{
+  font-size: 4em;
+}
+/* Heroku */
+.devicon-span-heroku{
+  padding-right: 5px;
+  font-size: 10px;  
+}
+.devicon-heroku-plain{
+  font-size: 4em;
+}
+/* mysql */
+.devicon-span-mysql{
+  padding-right: 5px;
+  font-size: 10px;   
+}
+.devicon-mysql-plain{
+  font-size: 4em;
+}
+/* Babel */
+.devicon-span-babel{
+  padding-right: 5px;
+  font-size: 10px;  
+}
+.devicon-babel-plain{
+  font-size: 4em;
+}
+/* Chrome */
+.devicon-span-chrome{
+  padding-right: 5px;
+  font-size: 10px;   
+}
+.devicon-chrome-plain{
+  font-size: 4em; 
+}
+}
+
+/* Projects */
+/* Project 1 Revogue*/
+.card-two{
+ 
+  display:flex;
+  flex-direction: column;
+  
+}
+.project-frame{
+  display:flex;
+  padding-top: 90px;
+  padding-bottom: 30px;
+  justify-content: center;
+}
+.project-image{
+  max-width: 900px;
+  border: 5px solid rgb(143, 247, 8);
+  
+}
+.info-projects{
+ 
+  padding-left: 80px;
+  padding-right: 50px;
+}
+
+.revogue{
+  padding-top: 0px;
+  font-family: 'Elsie', sans-serif;
+  font-size: 50px;
+  margin:0px;
+}
+.project-type{
+  font-family: 'Secular One', sans-serif; 
+  text-transform: uppercase;
+  font-size: 20px;
+}
+.devicons-project-row{
+  display:flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  padding-bottom: 0px;
+}
+.project-devicons {
+  display: flex;
+  flex-direction: row;
+  padding-bottom: 10px;
+  font-size: 1.5rem;
+ 
+}
+  .project-devicon {
+    padding-right: 10px;
+  }
+  #java-mini{
+    color:black !important;
+    font-size: 1em;
+  }
+  #rect-mini{
+    color:black !important;
+    font-size: 1em; 
+  }
+  #html-mini{
+    color:black !important;
+    font-size: 1em;  
+  }
+  #css-mini{
+    color:black !important;
+    font-size: 1em;  
+  }
+  #python-mini{
+    color:black !important;
+    font-size: 1em;  
+  }
+  #django-mini{
+    color:black !important;
+    font-size: 1em; 
+  }
+  #post-mini{
+    color:black !important;
+    font-size: 1em;  
+  }
+  #node-mini{
+    color:black !important;
+    font-size: 1em;  
+  }
+  .project-description{
+    display:flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    font-size: 15px;
+    align-content: flex-start;
+    font-family: 'Prata'; 
+    margin: 0px;
+  }
+  .buttons-container-one{
+   
+    padding-bottom: 2vh;
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  .button1{
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+   justify-content: space-around;
+   padding:20px;
+   margin:10px;
+   border-radius: 25px;
+   background-color: rgb(143, 247, 8);
+   margin-top: 30px;
+  }
+  #b1:hover{
+    background-color: black;
+    border-color: white;
+    color: rgb(93, 247, 4);
+  }
+
+  .intermezzo-black{
+    width: 100%;
+    height: 40px ;
+    margin-top: 40px;
+    background-color: black;
+  }
+  @media (max-width: 800px) {
+    .project-image{
+      max-width: 350px;
+      border: 5px solid rgb(143, 247, 8);
+    }
+      .devicons-project-row{
+      display:flex;
+       align-items: center;
+       justify-content: center;
+       flex-wrap: wrap;
+       
+      }
+      .project-description{
+        display: flex;
+        align-items: center;
+      }
+      .card-two{
+ 
+        display:flex;
+        flex-direction: column;
+        
+      }
+      .project-frame{
+        display:flex;
+        padding-top: 60px;
+        
+      }
+     
+  }
+  /* Project 2  Trippy*/
+
+.project-image1{
+  max-width: 900px;
+  border: 5px solid rgb(247, 8, 167);
+}
+.trippy{
+  padding-top: 0px;
+  font-family: 'Cutive Mono', monospace; 
+  font-size: 50px;
+  margin:0px;
+}
+
+#mini{
+  color:black !important;
+  font-size: 1em; 
+}
+.button2{
+display: flex;
+flex-direction: row;
+align-content: center;
+ justify-content: space-around;
+ padding:20px;
+ margin:10px;
+ border-radius: 50%;
+ height: 50px;
+ width: 50px;
+ background-color: rgb(247, 8, 167);
+ margin-top: 30px;
+}
+.span2{
+padding-top:15px;
+}
+#b2:hover{
+  background-color: black;
+  border-color: white;
+  color: rgb(247, 8, 167);
+}
+
+@media (max-width: 800px) {
+  .project-image1{
+    max-width: 350px;
+  
+  }
+}
+/* CarbonFree Project */
+.project-image2{
+  max-width: 900px;
+  border: 5px solid #ff5e00;
+}
+.carbon{
+  padding-top: 0px;
+  font-family:'Open Sans'; 
+  font-weight: bold;
+  font-size: 50px;
+  margin:0px;  
+}
+
+#b3 {
+  margin-top: 30px;
+  margin-right: 10px;
+  margin-left: 10px;
+  width: 100px;
+  height: 100px;
+  background: #ff5e00;
+  
+  
+}
+ 
+.span3{
+ display: flex;
+ padding-top: 37px;
+ padding-left: 23px;
+}
+#b3:hover{
+  background-color: black;
+  border-color: white;
+  color: #ff5e00;
+}
+@media (max-width: 800px) {
+  .project-image2{
+    max-width: 350px;
+  
+  }
+}
+/* Project 1  */
+
+.project-image4{
+  max-width: 900px;
+  border: 5px solid #c8ff00; 
+}
+.turtle{
+  padding-top: 0px;
+  font-family: 'Press Start 2P', cursive; 
+  font-weight: bold;
+  font-size: 30px;
+  margin:0px;  
+}
+#b4{
+display: flex;
+flex-direction: column;
+margin-top: 50px;
+ margin-left: 10px;
+ margin-right: 10px;
+}
+
+
+#b4{
+  margin-top: 30px;
+    width: 150px;
+    height: 70px;
+    background:#c8ff00;
+    border-radius: 100px / 50px;
+    margin-bottom: 30px;
+   
+  }
+.span4{
+display: flex ;
+padding-top: 23px;
+padding-left: 45px;
+}
+
+#b4:hover{
+  background-color: black;
+  border-color: white;
+  color: #c8ff00;
+}
+@media (max-width: 800px) {
+  .project-image4{
+    max-width: 350px;
+  }
+  }
+
+/* Experience */
+/* Scroller */
+
+.card-three{
+ padding-top: 50px; 
+}
+.wrapper{
+  max-height: 800px;
+  display: flex;
+  overflow-x: auto;
+  padding-bottom: 50px;
+  margin-bottom: 50px;
+  margin-top: 50px;;
+}
+
+.wrapper .item{
+  min-width: 500px;
+  height: 500px;
+  line-height: 100px;
+  text-align: center;
+
+  margin-right: 5px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid black;
+  
+
+
+}
+/* Logos */
+.ga-logo{
+padding-top: 2vh;
+padding-left: 2vh;
+ height: 10vh;
+ min-width: 10vh;
+}
+/* Items */
+.media-content{
+  display:flex;
+  flex-direction: row;
+  
+ }
+
+.all-headings{
+  display:flex;
+  flex-direction: row;
+  
+}
+ .ex-heading-text{
+  display:flex;
+  flex-direction: column;
+  margin-left: 3vh;
+ 
+
+ }
+ .ex-mini-heading1{
+  padding-top: 4vh;;
+  display: flex;
+  font-size: 20px;
+  line-height: 20%;
+  font-family: "Secular One", sans-serif;
+  text-transform: uppercase;
+ }
+ .ex-mini-heading2{
+   padding-top: 1vh;;
+  padding-bottom: 10px; 
+  margin:3px;
+  line-height:1;
+  font-family: "Secular One", sans-serif;
+  font-size: 20px;
+  text-transform: uppercase;
+
+ }
+ .bottom-card1{
+  padding-bottom: 5vh ;
+
+
+ }
+.ex-date{
+  text-transform: uppercase;
+  line-height:16px; 
+  font-family: "Secular One", sans-serif;
+  font-size: 20px;
+  padding-bottom: 7vh;
+}
+ .ex-description{
+  font-family: 'Prata'; 
+  line-height:30px;
+  padding-bottom: 2vh;
+  text-align:justify;
+  padding-left:20px;
+  padding-right:20px; 
+  margin-bottom: 0vh;
+  margin-top:0vh;
+ }
+
+.ex-ul{
+  margin-top:0vh;
+ padding-bottom: 4vh;
+
+}
+.ex-li{
+  line-height:30px; 
+  text-align:left;
+  font-family: 'Prata';
+  
+}
+
+@media (max-width: 800px) {
+  .wrapper .item{
+    min-width: 375px;
+    height: 600px;
+    line-height: 100px;
+    text-align: center;
+    margin-right: 5px;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+  }
+  .ex-mini-heading1{
+    padding-top: 3vh;
+   padding-bottom: 0px;
+    display: flex;
+    font-size: 20px;
+    line-height: 100%;
+    font-family: "Secular One", sans-serif;
+    text-transform: uppercase;
+}
+.card-three{
+  padding-top: 5px; 
+ }
+
+}
+  
+/* Mibact */
+
+.mibact-logo{
+height: 10vh;
+min-width: 10vh;
+padding-top: 3vh;
+padding-right: 14vh;
+padding-left: 3vh;
+}
+.ex-headings-text-mi{
+  display:flex;
+  flex-direction: column;
+
+  padding-top: 1vh;
+}
+.bottom-card{
+  padding-top: 8vh;
+}
+.ex-list-container{
+  padding-top: 1vh;
+}
+.ex-mini-heading3{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  padding-top:3vh;
+  padding-bottom: 3vh;
+  line-height: 20%;
+  font-family: "Secular One", sans-serif;
+  text-transform: uppercase;
+}
+.ex-mini-heading4{
+ display: flex;
+ padding-bottom: 2vh;
+  line-height:20px;
+  font-family: "Secular One", sans-serif;
+  text-transform: uppercase; 
+  font-size: 20px;
+  
+}
+@media (max-width: 800px) {
+  .mibact-logo{
+    height: 10vh;
+    min-width: 10vh;
+    padding-top: 3vh;
+    padding-right: 5vh;
+    padding-left: 3vh;
+    }
+
+}
+
+/* Gagosian and Gugge headings */
+.media-content1{
+
+ line-height:20px;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  max-height: 90px;
+  max-width: 100%; 
+}
+
+.all-headings2{
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+line-height:20px;
+padding-top: 5vh;
+
+}
+
+.all-headings3{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  line-height:20px;
+padding-top: 8vh;
+}
+
+.ex-headings-text1{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  line-height:20px;
+}
+@media (max-width: 800px) {
+
+  .all-headings2{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    line-height:20px;
+    padding-top: 8vh;
+    }
+  #guggenheim{
+      padding-top: 5vh;  
+    }
+
+}
+
+
+/* Education */
+.edu-title{
+  padding-top: 3vh;
+  line-height:20px;
+  font-family: "Secular One", sans-serif;
+  text-transform: uppercase; 
+  font-size: 20px; 
+}
+.edu-school{
+  padding-bottom: 2vh;
+}
+
+.edu-frame{
+  padding-top: 9vh;
+  padding-bottom: 4vh;
+  line-height:10px;
+  font-family: "Secular One", sans-serif;
+  text-transform: uppercase; 
+  font-size: 20px; 
+}
+.edu-type{
+  font-size: 18px;
+  font-weight: lighter;
+  line-height:20px;
+  padding-bottom: 2vh;;
+}
+.edu-place{
+  font-size: 18px;
+}
+/* Courses */
+.courses-header{
+  font-family: "Secular One", sans-serif; 
+  font-size: 20px;
+  line-height:28px;
+  padding-top: 2.5vh;
+  padding-bottom: 2vh;;
+}
+.course-container{
+  padding-top: 3vh;
+  line-height:10px;
+  font-family: "Secular One", sans-serif; 
+  text-transform: uppercase; 
+}
+.c-topic{
+  padding-bottom: 22px;
+  padding-top: 1vh;
+}
+@media (max-width: 800px) {
+  .edu-place{
+line-height: 20px;
+  }
+.c-topic{
+  line-height: 20px; 
+}
+.c-school{
+  line-height: 20px;  
+
+}
+.courses-header{
+  padding-top: 2vh;
+}
+  }
+
+
+/* Contacts */
+.card-five{
+  display:flex;
+  flex-direction: column;
+  
+
+  height: 35vh;
+  border-bottom: 5px solid black;
+ 
+
+}
+.contacts-header{
+  display: flex;
+  justify-content: center ;
+  font-family: "Secular One", sans-serif; 
+  font-size: 40px; 
+  padding-bottom: 10vh;
+}
+.contacts-links-container{
+  padding-top: 15vh;
+display: flex;
+justify-content: space-around;
+}
+
+#contacts-email{
+display: inline-flex;
+font-size: 20px;
+line-height: 23px;
+}
+
+#contacts-email:hover{
+  border-color: white;
+  color: #c8ff00;
+}
+
+#contacts-git{
+display: flex;
+font-size: 20px;
+line-height: 23px;
+}
+#contacts-git:hover{
+  border-color: white;
+  color:  rgb(247, 8, 167);
+}
+
+#contacts-linked{
+display:flex;
+font-size: 20px;
+line-height:23px;
+}
+#contacts-linked:hover{
+  border-color: white;
+  color:  #ff5e00;  
+}
+i{
+
+padding-right: 1vh;
+}
+
+footer{
+  background-color: black;
+  text-align: right;
+  color: white;
+  font-family: "Secular One", sans-serif; 
+  padding-right: 3vh;
+  
+} 
+.green-image{
+  max-width: 20px;
+}
+@media (max-width: 800px) {
+  footer{
+    background-color: black;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -27,7 +27,7 @@
 .navbar-register{
   text-decoration: none;
   display: flex;
-  justify-content: end; 
+  justify-content: flex-end; 
 
 }
 .navbar-collection{

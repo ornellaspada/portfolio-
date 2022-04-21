@@ -1,12 +1,18 @@
 /* eslint-disable react/jsx-no-comment-textnodes */
 import Skills from "./Skills"
+import Projects from "./Projects"
+import Experience from "./Experience"
+import Contacts from "./Contacts"
+import green from "../img/Green.png"
+
+
 
 
 function Home(){
 
   return(
     <>
-    <section className="home-section">
+    <section id="about" className="home-section">
     <div className="home-div">
     <h1 className="my-name">
     Ornella Spada
@@ -24,10 +30,25 @@ My interest in coding began by working in the fine art industry, where I was com
     </section>
     <div className="intermezzo"></div>
     <Skills />
-    <div>
+    <div className="card-one"></div>
     <div className="intermezzo"></div>
+    <Projects />
+    <div className="card-two">
     </div>
+    <div className="intermezzo"></div>
+    <Experience />
+    <div className="card-three">
+    </div>
+    <div className="intermezzo"></div>
+    <Contacts />
+    <div className="card-four">
+    </div>
+    <footer>
+    <img className="green-image" src={green} alt="green"/>
+    </footer>
   
+   
+
     </>
   )
 }
